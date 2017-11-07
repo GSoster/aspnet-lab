@@ -19,9 +19,10 @@ namespace Getting_Started_with_ASP.NET_MVC_5.Controllers
         // 
         // GET: /HelloWorld/Welcome/ 
 
-        public string Welcome()
+        public string Welcome(string name, int numTimes = 1)
         {
-            return "This is the Welcome action method...";
+            return HttpUtility.HtmlEncode("Hello " + name + ", NumTimes is: " + numTimes);
+            //return "This is the Welcome action method...";
         }
     }
 }
