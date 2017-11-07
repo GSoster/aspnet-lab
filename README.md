@@ -2,7 +2,10 @@
 A repository to store my C#/ASPNET codes and annotations
 
 ## ASP.NET MVC 5 
-Roadmap of projects/tutorials I plan to do.  
+Roadmap of projects/tutorials/courses related to ASP.NET MVC I plan to do.  
+
+*About ASP.NET MVC*: It gives you a powerful, patterns-based way to build dynamic websites that enables a clean separation of concerns and that gives you full control over markup for enjoyable, agile development. ASP.NET MVC includes many features that enable fast, TDD-friendly development for creating sophisticated applications that use the latest web standards.  
+
 - [ ] **Getting Started with ASP.NET MVC 5**: An introduction to ASP.NET MVC 5. [link](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/index)  
   
 - [ ] **Getting Started with EF 6 using MVC 5**:[link](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/index)
