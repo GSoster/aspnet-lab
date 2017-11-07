@@ -18,6 +18,14 @@ namespace Getting_Started_with_ASP.NET_MVC_5
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+
+            //routes the hello controler to: /localhost:XXX/HelloWorld/Welcome/Scott/3
+            routes.MapRoute(
+                name: "Hello",
+                url: "{controller}/{action}/{name}/{id}"
+            );
+
+
         }
     }
 }
