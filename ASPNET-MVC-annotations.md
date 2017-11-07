@@ -1,6 +1,12 @@
 # MVC
 
 ## About MVC  
+*MVC* stands for model-view-controller. MVC is a pattern for developing applications that are well architected, testable and easy to maintain. MVC-based applications contain:
+* **M** odels: Classes that represent the data of the application and that use validation logic to enforce business rules for that data.
+* **V** iews: Template files that your application uses to dynamically generate HTML responses.
+* **C** ontrollers: Classes that handle incoming browser requests, retrieve model data, and then specify view templates that return a response to the browser.
+
+*About ASP.NET MVC*: It gives you a powerful, patterns-based way to build dynamic websites that enables a clean separation of concerns and that gives you full control over markup for enjoyable, agile development. ASP.NET MVC includes many features that enable fast, TDD-friendly development for creating sophisticated applications that use the latest web standards.  
 
 ### Controller  
 Controller classes are invoked in response to an incoming URL request. A controller class is where you write the code that handles the incoming browser requests, retrieves data from a database, and ultimately decides what type of response to send back to the browser. View templates can then be used from a controller to generate and format an HTML response to the browser. 
