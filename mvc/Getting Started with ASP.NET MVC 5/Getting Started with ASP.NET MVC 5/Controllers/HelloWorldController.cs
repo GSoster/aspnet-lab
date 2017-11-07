@@ -24,7 +24,7 @@ namespace Getting_Started_with_ASP.NET_MVC_5.Controllers
         {
             //return "This is the Welcome action method..."; //version 1
             //return HttpUtility.HtmlEncode("Hello " + name + ", NumTimes is: " + numTimes); // version 2            
-            ViewBag.name = "Hello " + name;
+            ViewBag.Message = "Hello " + name;
             ViewBag.numTimes = numTimes;
 
             return View(); //version 3
