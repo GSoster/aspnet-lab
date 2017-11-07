@@ -2,7 +2,8 @@
 A repository to store my C#/ASPNET codes and annotations
 
 ## ASP.NET MVC 5 
-My annotations about ASP.NET MVC can be found [here](https://github.com/GSoster/aspnet-lab/blob/master/ASPNET-MVC-annotations.md)  
+
+__**My annotations about ASP.NET MVC can be found**__ [here](https://github.com/GSoster/aspnet-lab/blob/master/ASPNET-MVC-annotations.md)  
 
 Roadmap of projects/tutorials/courses related to ASP.NET MVC I plan to do:  
 
