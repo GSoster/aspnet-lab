@@ -76,10 +76,11 @@ namespace Getting_Started_with_ASP.NET_MVC_5.Controllers
         // POST: Movies/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
+        [HttpPost] //This attribute specifies that the overload of the Edit method can be invoked only for POST requests.
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,Title,ReleaseDate,Genre,Price")] Movie movie)
         {
+            // The ModelState.IsValid method verifies that the data submitted in the form can be used to modify (edit or update) a Movie object
             if (ModelState.IsValid)
             {
                 db.Entry(movie).State = EntityState.Modified;
