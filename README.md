@@ -7,7 +7,7 @@ __**My annotations about ASP.NET MVC can be found**__ [here](https://github.com/
 
 Roadmap of projects/tutorials/courses related to ASP.NET MVC I plan to do:  
 
-- [ ] **Getting Started with ASP.NET MVC 5**: An introduction to ASP.NET MVC 5. [link](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/index)  
+- [x] **Getting Started with ASP.NET MVC 5**: An introduction to ASP.NET MVC 5. [link](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/introduction/index)  
   
 - [ ] **Getting Started with EF 6 using MVC 5**:[link](https://docs.microsoft.com/en-us/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/index)
   
