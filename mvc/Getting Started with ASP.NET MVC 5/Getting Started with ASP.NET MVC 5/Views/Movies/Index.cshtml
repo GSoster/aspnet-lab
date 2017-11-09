@@ -12,8 +12,10 @@
     @*Below code was added to the page to add the search feature
      We dont define an action for the method so it will be the default (index)
      that is already expecting a string as search query.
-     *@
-    @using (Html.BeginForm())
+
+     The using HTML.BeginForm with parameters is to change the URL after the filter button is pressed.        
+     *@    
+    @using (Html.BeginForm("Index", "Movies", FormMethod.Get))
     {
     <p>
         Title: @Html.TextBox("SearchString") <br />

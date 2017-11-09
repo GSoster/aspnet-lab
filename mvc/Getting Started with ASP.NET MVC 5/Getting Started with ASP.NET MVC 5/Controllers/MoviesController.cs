@@ -18,14 +18,26 @@ namespace Getting_Started_with_ASP.NET_MVC_5.Controllers
         // ID is used to search like this: Movies/index/ghost
         // instead of Movies?searchString=ghost
         //it follows the App_Start\RouteConfig.cs file pattern
-        public ActionResult Index(string searchString)
-        {            
+        public ActionResult Index(string movieGenre, string searchString)
+        {
+            //get all the genres from the database (but not duplicate them)
+            var GenreList = new List<String>();
+            var GenreQry = from d in db.Movies
+                           orderby d.Genre
+                           select d.Genre;
+
+            GenreList.AddRange(GenreQry.Distinct());
+            //allows to access the data (genres) as a dropdown listbox
+            ViewBag.movieGenre = new SelectList(GenreList);
+
             var movies = from m in db.Movies select m;
 
-            if (!string.IsNullOrEmpty(searchString))
-            {
+            if (!string.IsNullOrEmpty(searchString))            
                 movies = movies.Where(s => s.Title.Contains(searchString));
-            }
+
+
+            if (!string.IsNullOrEmpty(movieGenre))
+                movies = movies.Where(x => x.Genre == movieGenre);
 
             return View(movies);
         }
