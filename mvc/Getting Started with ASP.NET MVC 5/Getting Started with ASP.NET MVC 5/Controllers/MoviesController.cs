@@ -29,6 +29,8 @@ namespace Getting_Started_with_ASP.NET_MVC_5.Controllers
             GenreList.AddRange(GenreQry.Distinct());
             //allows to access the data (genres) as a dropdown listbox
             ViewBag.movieGenre = new SelectList(GenreList);
+            //If we wanted "Comedy" as default option: 
+            //ViewBag.movieGenre = new SelectList(GenreLst, "Comedy");
 
             var movies = from m in db.Movies select m;
 

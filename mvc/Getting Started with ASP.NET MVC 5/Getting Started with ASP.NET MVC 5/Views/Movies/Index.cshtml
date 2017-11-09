@@ -9,15 +9,20 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 
-    @*Below code was added to the page to add the search feature
-     We dont define an action for the method so it will be the default (index)
-     that is already expecting a string as search query.
+    @*
+    -Below code was added to the page to add the search feature
+    We dont define an action for the method so it will be the default (index)
+    that is already expecting a string as search query.
 
-     The using HTML.BeginForm with parameters is to change the URL after the filter button is pressed.        
-     *@    
+    - The using HTML.BeginForm with parameters is to change the URL after the filter button is pressed.
+    - The @Html.DropDownList("movieGenre", "All") uses code from the index action in MovieController
+      to generate a dropdown. The parameter "movieGenre" provides the key for the DropDownList helper 
+      (defined in the controller and set in the viewbag)
+    *@    
     @using (Html.BeginForm("Index", "Movies", FormMethod.Get))
     {
     <p>
+        Genre: @Html.DropDownList("movieGenre", "All")
         Title: @Html.TextBox("SearchString") <br />
         <input type="submit" value="Filter" />
     </p>
