@@ -8,7 +8,21 @@
 
 <p>
     @Html.ActionLink("Create New", "Create")
+
+    @*Below code was added to the page to add the search feature
+     We dont define an action for the method so it will be the default (index)
+     that is already expecting a string as search query.
+     *@
+    @using (Html.BeginForm())
+    {
+    <p>
+        Title: @Html.TextBox("SearchString") <br />
+        <input type="submit" value="Filter" />
+    </p>
+    }    
+
 </p>
+
 <table class="table">
     <tr>
         <th>

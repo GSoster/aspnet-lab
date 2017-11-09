@@ -15,8 +15,11 @@ namespace Getting_Started_with_ASP.NET_MVC_5.Controllers
         private MovieDBContext db = new MovieDBContext();
 
         // GET: Movies
+        // ID is used to search like this: Movies/index/ghost
+        // instead of Movies?searchString=ghost
+        //it follows the App_Start\RouteConfig.cs file pattern
         public ActionResult Index(string searchString)
-        {
+        {            
             var movies = from m in db.Movies select m;
 
             if (!string.IsNullOrEmpty(searchString))
