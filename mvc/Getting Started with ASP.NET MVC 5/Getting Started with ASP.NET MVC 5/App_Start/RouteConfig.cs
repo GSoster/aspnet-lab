@@ -12,12 +12,7 @@ namespace Getting_Started_with_ASP.NET_MVC_5
         public static void RegisterRoutes(RouteCollection routes)
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
-
-            routes.MapRoute(
-                name: "Default",
-                url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
-            );
+            
 
             //routes the hello controler to: /localhost:XXX/HelloWorld/Welcome/Scott/3
             routes.MapRoute(
@@ -25,6 +20,11 @@ namespace Getting_Started_with_ASP.NET_MVC_5
                 url: "{controller}/{action}/{name}/{id}"
             );
 
+            routes.MapRoute(
+                name: "Default",
+                url: "{controller}/{action}/{id}",
+                defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
+            );
 
         }
     }

@@ -60,14 +60,17 @@ namespace Getting_Started_with_ASP.NET_MVC_5.Controllers
         }
 
         // GET: Movies/Create
+        // displays the initial Create form
         public ActionResult Create()
         {
             return View();
         }
 
         // POST: Movies/Create
+        // handles the form post.
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
+        // The ModelState.IsValid check whether the movie has any validation errors
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Title,ReleaseDate,Genre,Price, Rating")] Movie movie)
@@ -148,5 +151,17 @@ namespace Getting_Started_with_ASP.NET_MVC_5.Controllers
             }
             base.Dispose(disposing);
         }
+
+        //teste only
+        /// Movies/upfaz/asdasd
+        public string UpFaz(string id)
+        {
+            string name = id;
+            if (string.IsNullOrEmpty(name))
+                return "Veio vazio!";
+            else
+                return "Veio cheio + " + name;            
+        }
+
     }
 }

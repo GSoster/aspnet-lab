@@ -21,6 +21,10 @@ namespace Getting_Started_with_ASP.NET_MVC_5.Models
         [StringLength(30)]
         public string Genre { get; set; }
 
+        /**
+         * Value types (such as decimal, int, float, DateTime) are inherently required
+         * and don't need the Required attribute.
+         */
         [Range(1, 100)]
         [DataType(DataType.Currency)]
         public decimal Price { get; set; }
@@ -36,3 +40,4 @@ namespace Getting_Started_with_ASP.NET_MVC_5.Models
         public DbSet<Movie> Movies { get; set; }
     }
 }
+ 
