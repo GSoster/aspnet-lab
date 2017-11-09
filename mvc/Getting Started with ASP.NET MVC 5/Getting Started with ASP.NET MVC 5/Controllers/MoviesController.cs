@@ -70,7 +70,7 @@ namespace Getting_Started_with_ASP.NET_MVC_5.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "ID,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public ActionResult Create([Bind(Include = "ID,Title,ReleaseDate,Genre,Price, Rating")] Movie movie)
         {
             if (ModelState.IsValid)
             {
@@ -102,7 +102,7 @@ namespace Getting_Started_with_ASP.NET_MVC_5.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost] //This attribute specifies that the overload of the Edit method can be invoked only for POST requests.
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "ID,Title,ReleaseDate,Genre,Price")] Movie movie)
+        public ActionResult Edit([Bind(Include = "ID,Title,ReleaseDate,Genre,Price, Rating")] Movie movie)
         {
             // The ModelState.IsValid method verifies that the data submitted in the form can be used to modify (edit or update) a Movie object
             if (ModelState.IsValid)
