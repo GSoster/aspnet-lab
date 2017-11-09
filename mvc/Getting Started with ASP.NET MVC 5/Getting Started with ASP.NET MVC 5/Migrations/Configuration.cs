@@ -13,6 +13,8 @@ namespace Getting_Started_with_ASP.NET_MVC_5.Migrations
 
         protected override void Seed(Getting_Started_with_ASP.NET_MVC_5.Models.MovieDBContext context)
         {
+            //The first parameter passed to the AddOrUpdate method specifies
+            //the property to use to check if a row already exists.
             context.Movies.AddOrUpdate(i => i.Title,
         new Movie
         {
